@@ -6,23 +6,23 @@ import Watch from './components/Watch/Watch'
 function App() {
   const [watches, setwatches] = useState([]);
   useEffect(() => {
-    // const fetchData = async () => {
-    //   try {
-    //     const URL = 'watches.json';
-    //     const res = await fetch(URL);
-    //     const data = await res.json();
-    //     setwatches(data)
-    //   }
-    //   catch (error) {
-    //     console.log(error)
-    //   };
+    const fetchData = async () => {
+      try {
+        const URL = 'watches.json';
+        const res = await fetch(URL);
+        const data = await res.json();
+        setwatches(data)
+      }
+      catch (error) {
+        console.log(error)
+      };
 
-    //   fetchData()
-    // }
+    }
+    fetchData()
 
-    fetch('watches.json')
-      .then(res => res.json())
-      .then(data => setwatches(data));
+    // fetch('watches.json')
+    //   .then(res => res.json())
+    //   .then(data => setwatches(data));
 
   }, [])
 
