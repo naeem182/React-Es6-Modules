@@ -1,11 +1,15 @@
-import React from 'react'
-import "./Sunglass.css"
-import Watch from './Watch/Watch'
 
-const Sunglass = () => {
+import "./Sunglass.css"
+// import Watch from './Watch/Watch'
+
+const Sunglass = ({ sunglass }) => {
+    //     const { name, price } = sunglass;
     return (
         <div>
-            <Watch></Watch>
+
+            {/* <h3>name:{sunglass.name} </h3>
+
+            <h3>Price:{sunglass.price}</h3> */}
         </div>
     )
 }
